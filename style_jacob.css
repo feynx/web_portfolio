@@ -1,0 +1,532 @@
+/* Custom Properties / Variables - Red & Black Theme */
+:root {
+    --primary-color: #ff3333; /* အနီရောင် (Red) */
+    --secondary-color: #c00000; /* ပိုနက်တဲ့ အနီရောင် */
+    --bg-dark: #121212; /* နောက်ခံအနက်ရောင် */
+    --bg-card: #1f1f1f; /* ကဒ်နောက်ခံ နက်ပြာရောင် */
+    --text-light: #f4f4f4; /* စာသားအဖြူရောင် */
+    --text-grey: #a0a0a0; /* စာသားမီးခိုးရောင် */
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-family);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 3em; }
+h2 { font-size: 2.5em; text-align: center; }
+
+h1 strong, h2 strong, h3 strong {
+    color: var(--primary-color);
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary, .btn-submit, .btn-readmore {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+    margin-right: 15px;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+}
+
+.btn-secondary {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+}
+
+.btn-readmore {
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+    margin-top: 20px;
+}
+.btn-readmore:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+    padding: 15px 30px;
+    font-size: 1.1em;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: var(--bg-dark);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--text-light);
+}
+
+.navbar nav a {
+    margin-left: 30px;
+    color: var(--text-grey);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 100px 0;
+}
+
+.hero-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 5px;
+}
+
+.hero-content h2 {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.hero-content .description {
+    color: var(--text-grey);
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.hero-image {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    /* Glow Effect and Border */
+    box-shadow: 
+        0 0 20px rgba(255, 51, 51, 0.5), 
+        0 0 40px rgba(255, 51, 51, 0.3);
+    border: 3px solid var(--primary-color);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.social-links {
+    margin-top: 30px;
+}
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--text-grey);
+    color: var(--text-grey);
+    margin-right: 15px;
+    transition: all 0.3s;
+}
+.social-links a:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--bg-dark);
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--bg-card);
+    padding-top: 100px; /* ပုံစံတူစေရန် padding ချိန်ညှိသည် */
+}
+
+.about-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.about-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--primary-color);
+    /* Glow Effect */
+    box-shadow: 0 0 10px rgba(255, 51, 51, 0.4);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about-content h3 {
+    text-align: left;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.about-content p {
+    color: var(--text-grey);
+}
+
+/* Journey Section (Timeline) */
+.journey-section {
+    background-color: var(--bg-dark);
+}
+
+.journey-timeline {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.timeline-column {
+    flex: 1;
+    max-width: 450px;
+}
+
+.timeline-column h3 {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-size: 1.5em;
+}
+
+.timeline-item {
+    background-color: var(--bg-card);
+    padding: 20px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 4px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 20px;
+    width: 14px;
+    height: 14px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-date {
+    display: block;
+    font-size: 0.9em;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.timeline-item h4 {
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.timeline-item p {
+    color: var(--text-grey);
+    font-size: 0.9em;
+}
+
+/* Skills Section */
+.skills-section {
+    background-color: var(--bg-card);
+}
+
+.skills-grid {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.skill-column {
+    flex: 1;
+    max-width: 450px;
+}
+
+.skill-column h3 {
+    text-align: left;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.skill-bar {
+    margin-bottom: 20px;
+}
+
+.skill-bar p {
+    color: var(--text-light);
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.bar-container {
+    background-color: var(--bg-dark);
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-size: 0.7em;
+    text-align: right;
+    padding-right: 5px;
+    line-height: 10px;
+    transition: width 1s ease-out;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--bg-dark);
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--bg-card);
+    color: var(--text-light);
+    border-radius: 5px;
+    font-family: var(--font-family);
+}
+
+.contact-form .form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-form .form-row input {
+    flex: 1;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-dark);
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer p {
+    color: var(--text-grey);
+    font-size: 0.9em;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .journey-timeline, .skills-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .timeline-column, .skill-column {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-image {
+        order: -1;
+        margin-bottom: 30px;
+    }
+
+    .about-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-form .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .navbar nav {
+        display: none;
+    }
+}
+/* ======================================================= */
+/* --- SKILLS SECTION (3 Column Grid - New Style) --- */
+/* ======================================================= */
+
+/*
+   * သတိပြုရန်: 
+   * ယခင် .skills-grid နှင့် .skill-column အတွက်ရှိသော CSS 
+   * ကုဒ်များကို ဖျက်/ပိတ် (Comment Out) ပြီးမှ 
+   * အောက်ပါ ကုဒ်ကို ထည့်သွင်းသင့်ပါသည်။
+*/
+
+.skills-section {
+    /* Background အရောင်ကို အနက်ရောင်ပြောင်းရန် (မူရင်း BG Card အရောင်) */
+    background-color: var(--bg-card); 
+}
+
+.skills-section h2 {
+    /* ခေါင်းစဉ်ကို စာမျက်နှာအလယ်မှာ ထားသည် */
+    text-align: center;
+}
+
+.skills-grid-new {
+    display: grid;
+    /* 3 Column Layout ကို 1fr (ညီတူညီမျှ) အနေနဲ့ သတ်မှတ်ခြင်း */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; /* Item များကြား ခြားနားမှု */
+    margin-top: 40px;
+    max-width: 1000px; /* Grid ကို ပိုမိုကြီးမားစေပြီး အလယ်မှာ ထားသည် */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill-item {
+    background-color: var(--bg-dark); /* Item နောက်ခံအရောင် */
+    padding: 20px;
+    border-radius: 8px;
+    /* Border Glow Effect အနီရောင် ထည့်သွင်းခြင်း */
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 5px rgba(255, 51, 51, 0.3);
+    transition: transform 0.3s;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px); /* Hover Effect ထည့်သည် */
+    box-shadow: 0 0 15px rgba(255, 51, 51, 0.5);
+}
+
+.skill-item h3 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/* Skill Bar ပုံစံများ */
+.bar-container {
+    background-color: var(--bg-dark);
+    height: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-size: 0.7em;
+    text-align: right;
+    padding-right: 5px;
+    line-height: 15px;
+    transition: width 1s ease-out;
+}
+
+/* Mobile အတွက် ချိန်ညှိခြင်း (Responsiveness) */
+@media (max-width: 1024px) {
+    .skills-grid-new {
+        grid-template-columns: repeat(2, 1fr); /* နေရာကျဉ်းရင် ၂ ကော်လံ ပြောင်းသည် */
+    }
+}
+@media (max-width: 600px) {
+    .skills-grid-new {
+        grid-template-columns: 1fr; /* ဖုန်းမှာဆိုရင် ၁ ကော်လံ ပြောင်းသည် */
+        gap: 20px;
+    }
+}
