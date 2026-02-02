@@ -173,7 +173,10 @@ Currently, I am advancing my DevOps journey by strengthening cloud and automatio
         <section id="contact" class="contact-section">
             <div class="container">
                 <h2>Contact Me</h2>
-                <form class="contact-form">
+                <form class="contact-form"
+                action="https://formspree.io/f/mrelopqd"
+                method="POST"
+                >
                     <div class="form-row">
                         <input type="text" placeholder="Full Name" required>
                         <input type="email" placeholder="Email Address" required>
@@ -183,8 +186,15 @@ Currently, I am advancing my DevOps journey by strengthening cloud and automatio
                         <input type="text" placeholder="Email Subject" required>
                     </div>
                     <textarea placeholder="Your Message" rows="5" required></textarea>
+                    
+                    <!-- Optional: Disable captcha if needed -->
+                    <input type="hidden" name="_captcha" value="false">
                     <button type="submit" class="btn-submit">Send</button>
                 </form>
+                <p class="contact-note">
+                    📩 Messages are delivered directly to my email.
+                </p>
+                
             </div>
         </section>
     </main>
